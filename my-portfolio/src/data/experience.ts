@@ -10,7 +10,7 @@ export const experience: ExperienceItem[] = [
     location: 'Austin, TX',
     description: 'Deploying robo dogs for Fortune Global 500 companies! 🐕',
     technologies: ['Python', 'ROS/ROS2', '3D Computer Vision', 'AI/ML'],
-    companyLogo: '/fieldAI.png'
+    companyLogo: '/public/fieldAI.png'
   },
   {
     id: '2',
@@ -21,7 +21,7 @@ export const experience: ExperienceItem[] = [
     location: 'Austin, TX',
     description: 'Conducted research on human-robot interaction (HRI) and robotic perception. 👀',
     technologies: ['Python', 'PyTorch', 'C++', 'SQLite','ROS2', '3D Computer Vision', 'NLP'],
-    companyLogo: '/UT_Austin.png'
+    companyLogo: '/public/UT_Austin.png'
   },
   {
     id: '3',
@@ -32,7 +32,7 @@ export const experience: ExperienceItem[] = [
     location: 'Sugar Land, TX',
     description: 'Built and deployed autonomous solutions for infrastructure projects. 🚧',
     technologies: ['Python', 'ESP32/IoT', '3D Computer Vision', 'AI/ML', 'Power Automate', 'SharePoint'],
-    companyLogo: '/Bechtel.png'
+    companyLogo: '/public/Bechtel.png'
   }, 
   {
     id: '4',
@@ -43,6 +43,6 @@ export const experience: ExperienceItem[] = [
     location: 'Austin, TX',
     description: 'Fine-tuned large language models (LLMs) for biomolecular applications. 🧬',
     technologies: ['Python', 'PyTorch', 'Scikit-learn', 'Transformers', 'AI/ML', 'Data Analysis'],
-    companyLogo: '/UT_Austin.png'
+    companyLogo: '/public/UT_Austin.png'
   } 
 ];

@@ -9,6 +9,6 @@ export const education: EducationItem[] = [
     startYear: '2024',
     endYear: '2027',
     description: 'Working on robots! 🤖',
-    logoUrl: '/UT_Austin.png'
+    logoUrl: '/public/UT_Austin.png'
   },
 ];
