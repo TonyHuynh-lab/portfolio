@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   {
     id: '7',
     name: 'C++',
-    icon: 'C++ (CPlusPlus).svg',
+    icon: 'Cplusplus.svg',
     category: 'SWE',
     proficiency: 3,
   },
@@ -103,7 +103,7 @@ export const skills: Skill[] = [
   {
     id: '15',
     name: 'ROS/ROS2',
-    icon: 'Robot Operating System (ROS).svg',
+    icon: 'Ros.svg',
     category: 'AI/ML',
     proficiency: 5,
   },
