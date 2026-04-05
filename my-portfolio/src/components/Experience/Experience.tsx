@@ -24,7 +24,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
                   <p>{item.company}</p>
                   {item.companyLogo && (
                     <img
-                      src={process.env.PUBLIC_URL + item.companyLogo}
+                      src={item.companyLogo}
                       alt={`${item.company} logo`}
                       className="experience__logo"
                     />

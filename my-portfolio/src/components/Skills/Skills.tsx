@@ -46,12 +46,9 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <div key={skill.id} className="skill-card">
             <div className="skill-card__icon">
               <img
-                src={`/icons/skills/${skill.icon}`}
+                src={skill.icon}
                 alt={`${skill.name} icon`}
                 className="skill-icon"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                }}
               />
             </div>
             <h3 className="skill-card__title">{skill.name}</h3>
