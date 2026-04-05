@@ -47,7 +47,7 @@ export const skills: Skill[] = [
   {
     id: '7',
     name: 'C++',
-    icon: 'C++ (Cplusplus).svg',
+    icon: 'C++ (CPlusPlus).svg',
     category: 'SWE',
     proficiency: 3,
   },
