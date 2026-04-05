@@ -6,6 +6,13 @@ interface ExperienceProps {
   experience: ExperienceItem[];
 }
 
+const getPublicAssetUrl = (assetPath: string): string => {
+  if (assetPath.startsWith('/public/')) {
+    return `${process.env.PUBLIC_URL || ''}${assetPath.slice('/public'.length)}`;
+  }
+  return assetPath;
+};
+
 const Experience: React.FC<ExperienceProps> = ({ experience }) => {
   return (
     <section id="experience" className="experience">
@@ -24,7 +31,7 @@ const Experience: React.FC<ExperienceProps> = ({ experience }) => {
                   <p>{item.company}</p>
                   {item.companyLogo && (
                     <img
-                      src={item.companyLogo}
+                      src={getPublicAssetUrl(item.companyLogo)}
                       alt={`${item.company} logo`}
                       className="experience__logo"
                     />

@@ -6,6 +6,13 @@ interface SkillsProps {
   skills: Skill[];
 }
 
+const getPublicAssetUrl = (assetPath: string): string => {
+  if (assetPath.startsWith('/public/')) {
+    return `${process.env.PUBLIC_URL || ''}${assetPath.slice('/public'.length)}`;
+  }
+  return assetPath;
+};
+
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const [filter, setFilter] = useState<string>('all');
 
@@ -46,7 +53,7 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
           <div key={skill.id} className="skill-card">
             <div className="skill-card__icon">
               <img
-                src={skill.icon}
+                src={getPublicAssetUrl(skill.icon)}
                 alt={`${skill.name} icon`}
                 className="skill-icon"
               />

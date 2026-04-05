@@ -6,6 +6,13 @@ interface ProjectsProps {
   projects: Project[];
 }
 
+const getPublicAssetUrl = (assetPath: string): string => {
+  if (assetPath.startsWith('/public/')) {
+    return `${process.env.PUBLIC_URL || ''}${assetPath.slice('/public'.length)}`;
+  }
+  return assetPath;
+};
+
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   const [filter, setFilter] = useState<string>('all');
   
@@ -53,7 +60,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
         {filteredProjects.map((project) => (
           <div key={project.id} className="project-card">
             <div className="project-card__image">
-              <img src={project.imageUrl} alt={project.title} />
+              <img src={getPublicAssetUrl(project.imageUrl)} alt={project.title} />
             </div>
             
             <div className="project-card__content">

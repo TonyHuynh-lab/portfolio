@@ -6,6 +6,13 @@ interface EducationProps {
   education: EducationItem[];
 }
 
+const getPublicAssetUrl = (assetPath: string): string => {
+  if (assetPath.startsWith('/public/')) {
+    return `${process.env.PUBLIC_URL || ''}${assetPath.slice('/public'.length)}`;
+  }
+  return assetPath;
+};
+
 const Education: React.FC<EducationProps> = ({ education }) => {
   return (
     <section id="education" className="education">
@@ -24,7 +31,7 @@ const Education: React.FC<EducationProps> = ({ education }) => {
                   <p>{item.institution}</p>
                   {item.logoUrl && (
                     <img
-                      src={item.logoUrl}
+                      src={getPublicAssetUrl(item.logoUrl)}
                       alt={`${item.institution} logo`}
                       className="education__logo"
                     />
