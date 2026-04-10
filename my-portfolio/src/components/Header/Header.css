@@ -128,6 +128,17 @@
 }
 
 @media (max-width: 768px) {
+  .header__container {
+    padding: 0 1rem;
+  }
+
+  .header__logo {
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .header__menu-button {
     display: block;
   }
@@ -170,5 +181,19 @@
 
   .header__nav a::after {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__container {
+    padding: 0 0.75rem;
+  }
+
+  .header__logo {
+    font-size: 0.9rem;
+  }
+
+  .header__menu-button {
+    padding: 0.25rem;
   }
 }

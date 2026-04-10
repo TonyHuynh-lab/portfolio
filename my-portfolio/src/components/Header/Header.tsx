@@ -29,7 +29,6 @@ const Header: React.FC<HeaderProps> = ({ navLinks, logo }) => {
         </div>
         
         <button className="header__menu-button" onClick={toggleMenu}>
-          <span className="sr-only">Toggle menu</span>
           <div className={`hamburger ${isMenuOpen ? 'open' : ''}`}></div>
         </button>
         
