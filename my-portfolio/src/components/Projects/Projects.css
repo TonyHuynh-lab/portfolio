@@ -155,11 +155,13 @@
   transition: all 0.3s ease;
   cursor: pointer;
   border: 2px solid transparent;
+  color: var(--text-color);
 }
 
 .button--sm {
   padding: 0.4rem 0.8rem;
   font-size: 0.8rem;
+  color: var(--text-color);
 }
 
 .button--outline {

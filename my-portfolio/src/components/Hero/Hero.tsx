@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ personalInfo }) => {
           <p>{personalInfo.bio}</p>
           
           <div className="hero__cta">
-            <a href="#projects" className="button button--primary">
+            <a href="#projects" className="button button--secondary">
               View My Work
             </a>
             <a href="#contact" className="button button--secondary">

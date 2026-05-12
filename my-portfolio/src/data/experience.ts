@@ -3,7 +3,7 @@ import { ExperienceItem } from '../types';
 export const experience: ExperienceItem[] = [
   {
     id: '1',
-    position: 'Forward Deployed Engineer',
+    position: 'Forward Deployed Engineer Intern',
     company: 'FieldAI',
     startDate: 'Jan 2026',
     endDate: 'Present',

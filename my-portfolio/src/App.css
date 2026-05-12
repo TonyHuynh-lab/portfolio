@@ -40,28 +40,28 @@ footer {
 
 /* CSS Variables for theming */
 :root {
-  --bg-color: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --text-color: #333333;
-  --text-secondary: #666666;
-  --primary-color: #007bff;
-  --accent-color: #0056b3;
-  --card-bg: #ffffff;
-  --border-color: #e9ecef;
-  --primary-color-rgb: 0, 123, 255;
+  --bg-color: #252525;
+  --bg-secondary: #383838;
+  --text-color: #CFCFCF;
+  --text-secondary: #CFCFCF;
+  --primary-color: #b0b0b0;
+  --accent-color: #757575;
+  --card-bg: #292828;
+  --border-color: #2e2e2e;
+  --primary-color-rgb: 176, 176, 176;
 }
 
 /* Dark theme */
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --bg-secondary: #2d2d2d;
-  --text-color: #ffffff;
-  --text-secondary: #cccccc;
-  --primary-color: #4dabf7;
-  --accent-color: #339af0;
-  --card-bg: #2d2d2d;
-  --border-color: #404040;
-  --primary-color-rgb: 77, 171, 247;
+  --bg-color: #252525;
+  --bg-secondary: #383838;
+  --text-color: #CFCFCF;
+  --text-secondary: #CFCFCF;
+  --primary-color: #b0b0b0;
+  --accent-color: #757575;
+  --card-bg: #292828;
+  --border-color: #2e2e2e;
+  --primary-color-rgb: 176, 176, 176;
 }
 
 /* Button styles */

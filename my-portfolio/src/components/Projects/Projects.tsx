@@ -81,7 +81,8 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                     href={project.liveUrl}
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="button button--sm"
+                    className="button button--sm
+                    button--outline"
                   >
                     Live Demo
                   </a>
