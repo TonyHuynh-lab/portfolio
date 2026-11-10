@@ -32,11 +32,16 @@ function ExperienceSection() {
   ];
 
   return (
-    <section className="block" id="experience">
-      <h2>Experience</h2>
+    <section className="block reveal" id="experience">
+      <h2>
+        <span className="num">02</span>Experience
+      </h2>
       <div className="experience-list">
         {experiences.map((item) => (
-          <div key={`${item.company}-${item.period}`} className="experience-item">
+          <div
+            key={`${item.company}-${item.period}`}
+            className={`experience-item${item.period.includes('Present') ? ' current' : ''}`}
+          >
             <div className="experience-meta">
               <span className="experience-role">{item.role}</span>
               <span className="experience-period">{item.period}</span>

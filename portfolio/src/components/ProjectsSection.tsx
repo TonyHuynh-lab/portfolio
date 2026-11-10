@@ -1,51 +1,62 @@
+type Project = {
+  title: string;
+  href?: string;
+  description: string;
+  tags: string[];
+};
+
+const projects: Project[] = [
+  {
+    title: 'Spotify Clone',
+    href: 'https://github.com/TonyHuynh-lab/soundmind',
+    description: 'A web application that mimics the functionality of Spotify.',
+    tags: ['MongoDB', 'Express.js', 'React', 'Node.js', 'FastAPI', 'Python'],
+  },
+  {
+    title: 'VAL2 (Versatile Autonomous Loader)',
+    description: 'An autonomous buggy designed for tool delivery in construction environments.',
+    tags: ['Python', 'C++', 'ROS', 'RTK/GNSS', 'HTML/CSS', 'FastAPI'],
+  },
+  {
+    title: 'BudgeX',
+    href: 'https://github.com/TonyHuynh-lab/BudgeX',
+    description:
+      'A web application that helps users manage their budget and track their expenses on a local database.',
+    tags: ['Electron', 'React', 'TypeScript', 'SQLite'],
+  },
+  {
+    title: 'Bookie',
+    href: 'https://github.com/LonghornBookie',
+    description: 'An autonomous librarian bot designed to assist with book navigation and cataloging.',
+    tags: ['C++', 'Python', 'ROS2', 'LLM', 'SQLite'],
+  },
+];
+
 function ProjectsSection() {
   return (
-    <section className="block" id="projects">
-      <h2>Projects</h2>
-      <div className="project">
-        <a href="https://github.com/TonyHuynh-lab/soundmind" className="project-title">Spotify Clone</a>
-        <p className="project-description">A web application that mimics the functionality of Spotify.</p>
-        <div className="tags">
-          <span className="tag">MongoDB</span>
-          <span className="tag">Express.js</span>
-          <span className="tag">React</span>
-          <span className="tag">Node.js</span>
-          <span className="tag">FastAPI</span>
-          <span className="tag">Python</span>
-        </div>
-      </div>
-      <div className="project">
-        <a href="#" className="project-title">VAL2 (Versatile Autonomous Loader)</a>
-        <p className="project-description">An autonomous buggy designed for tool delivery in construction environments.</p>
-        <div className="tags">
-          <span className="tag">Python</span>
-          <span className="tag">C++</span>
-          <span className="tag">ROS</span>
-          <span className="tag">RTK/GNSS</span>
-          <span className="tag">HTML/CSS</span>
-          <span className="tag">FastAPI</span>
-        </div>
-      </div>
-      <div className="project">
-        <a href="https://github.com/TonyHuynh-lab/BudgeX" className="project-title">BudgeX</a>
-        <p className="project-description">A web application that helps users manage their budget and track their expenses on a local database.</p>
-        <div className="tags">
-          <span className="tag">Electron</span>
-          <span className="tag">React</span>
-          <span className="tag">TypeScript</span>
-          <span className="tag">SQLite</span>
-        </div>
-      </div>
-      <div className="project">
-        <a href="https://github.com/LonghornBookie" className="project-title">Bookie</a>
-        <p className="project-description">An autonomous librarian bot designed to assist with book navigation and cataloging.</p>
-        <div className="tags">
-          <span className="tag">C++</span>
-          <span className="tag">Python</span>
-          <span className="tag">ROS2</span>
-          <span className="tag">LLM</span>
-          <span className="tag">SQLite</span>
-        </div>
+    <section className="block reveal" id="projects">
+      <h2>
+        <span className="num">03</span>Projects
+      </h2>
+      <div className="project-grid">
+        {projects.map((project) => (
+          <article key={project.title} className="project">
+            {project.href ? (
+              <a href={project.href} className="project-title" target="_blank" rel="noreferrer">
+                {project.title}
+                <span className="arrow" aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <span className="project-title">{project.title}</span>
+            )}
+            <p className="project-description">{project.description}</p>
+            <div className="tags">
+              {project.tags.map((tag) => (
+                <span key={tag} className="tag">{tag}</span>
+              ))}
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
